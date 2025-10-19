@@ -1,77 +1,477 @@
+/* --------------------
+
+   BASE & TYPOGRAPHY
+
+   -------------------- */
+
+:root {
+
+    --primary-color: #2c3e50; /* Deep Navy Blue */
+
+    --accent-color: #e67e22; /* Orange/Coral Accent */
+
+    --light-bg: #f4f7f6;
+
+    --text-color: #333;
+
+}
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
 body {
 
-    background-color: #f8f9fa;
+    font-family: 'Open Sans', sans-serif;
+
+    line-height: 1.6;
+
+    color: var(--text-color);
+
+    background-color: var(--light-bg);
 
 }
 
-.hidden {
+.container {
 
-    display: none !important;
+    max-width: 1200px;
 
-}
+    margin: 0 auto;
 
-/* Styling untuk Kotak Navigasi (Menu Cards) */
-
-.menu-card {
-
-    cursor: pointer;
-
-    transition: transform 0.2s, box-shadow 0.2s;
-
-    border: 1px solid #dee2e6;
+    padding: 0 20px;
 
 }
 
-.menu-card:hover {
+h1, h2, h3, h4 {
 
-    transform: translateY(-5px);
+    font-family: 'Montserrat', sans-serif;
 
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    color: var(--primary-color);
 
-    background-color: #e9ecef;
+    line-height: 1.2;
 
 }
 
-/* Styling untuk Area Konten */
+/* --------------------
 
-.content-section {
+   HEADER & NAVIGATION
 
-    padding: 20px;
+   -------------------- */
+
+#main-header {
+
+    background-color: #ffffff;
+
+    padding: 15px 0;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    z-index: 100;
+
+    transition: all 0.3s ease-in-out;
+
+}
+
+#main-header.sticky {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.header-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.logo {
+
+    font-size: 1.8rem;
+
+    font-weight: 800;
+
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: var(--primary-color);
+
+    margin-left: 25px;
+
+    font-weight: 600;
+
+    transition: color 0.3s;
+
+}
+
+nav a:hover {
+
+    color: var(--accent-color);
+
+}
+
+/* --------------------
+
+   HERO SECTION
+
+   -------------------- */
+
+.hero-section {
+
+    background: var(--primary-color);
+
+    color: white;
+
+    padding: 80px 0;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+.hero-title {
+
+    color: white;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 10px;
+
+}
+
+.hero-meta {
+
+    opacity: 0.8;
+
+    margin-bottom: 20px;
+
+}
+
+.btn-primary {
+
+    display: inline-block;
+
+    background: var(--accent-color);
+
+    color: white;
+
+    padding: 10px 25px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    transition: background 0.3s;
+
+}
+
+.btn-primary:hover {
+
+    background: #c0631c;
+
+}
+
+/* --------------------
+
+   MAIN GRID LAYOUT
+
+   -------------------- */
+
+.main-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr; /* Post Area 2/3, Sidebar 1/3 */
+
+    gap: 40px;
+
+    padding-bottom: 50px;
+
+}
+
+.posts-area h3 {
+
+    margin-bottom: 25px;
+
+    border-left: 5px solid var(--accent-color);
+
+    padding-left: 10px;
+
+}
+
+/* --------------------
+
+   POST CARD STYLING
+
+   -------------------- */
+
+.post-card {
 
     background: white;
 
     border-radius: 8px;
 
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 30px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 
-/* Styling untuk Kuis */
+.post-card:hover {
 
-#dynamic-quiz-form label {
+    transform: translateY(-5px); /* Animasi hover: naik sedikit */
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+.post-image {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
 
     display: block;
 
-    padding: 8px;
+}
 
-    margin-bottom: 5px;
+.post-content {
 
-    border-radius: 5px;
-
-    transition: background-color 0.2s;
+    padding: 25px;
 
 }
 
-#dynamic-quiz-form label:hover {
+.category {
 
-    background-color: #f0f0f0;
+    display: inline-block;
+
+    background: var(--accent-color);
+
+    color: white;
+
+    padding: 4px 10px;
+
+    border-radius: 3px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
 
 }
 
-/* Penyesuaian agar form login tidak terlalu lebar */
+.post-content h4 {
 
-#login-section {
+    font-size: 1.5rem;
 
-    max-width: 450px;
+    margin-bottom: 10px;
+
+}
+
+.read-more {
+
+    color: var(--accent-color);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    display: block;
+
+    margin-top: 15px;
+
+}
+
+/* --------------------
+
+   SIDEBAR STYLING
+
+   -------------------- */
+
+.sidebar h4 {
+
+    border-bottom: 2px solid var(--accent-color);
+
+    padding-bottom: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+.widget {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    margin-bottom: 30px;
+
+}
+
+.about-me {
+
+    text-align: center;
+
+}
+
+.profile-pic {
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin: 10px auto;
+
+    border: 3px solid var(--accent-color);
+
+}
+
+.categories ul {
+
+    list-style: none;
+
+}
+
+.categories li a {
+
+    display: block;
+
+    padding: 8px 0;
+
+    color: var(--text-color);
+
+    text-decoration: none;
+
+    border-bottom: 1px dashed #eee;
+
+    transition: color 0.3s;
+
+}
+
+.categories li a:hover {
+
+    color: var(--accent-color);
+
+    padding-left: 5px;
+
+}
+
+/* --------------------
+
+   ANIMATION (Scroll Reveal)
+
+   -------------------- */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* --------------------
+
+   FOOTER
+
+   -------------------- */
+
+footer {
+
+    background: var(--primary-color);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px 0;
+
+    font-size: 0.9rem;
+
+}
+
+/* --------------------
+
+   RESPONSIVE (Mobile First)
+
+   -------------------- */
+
+@media (max-width: 768px) {
+
+    .main-grid {
+
+        grid-template-columns: 1fr; /* Ubah ke satu kolom di mobile */
+
+    }
+
+    .header-content {
+
+        flex-direction: column;
+
+    }
+
+    nav {
+
+        margin-top: 10px;
+
+    }
+
+    nav a {
+
+        margin: 0 10px;
+
+    }
+
+    .hero-title {
+
+        font-size: 2rem;
+
+    }
 
 }
