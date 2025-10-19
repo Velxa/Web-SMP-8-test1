@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPLDV - Sistem Persamaan Linear Dua Variabel</title>
+
+    <!-- WAJIB: CDN MathJax untuk menampilkan rumus LaTeX -->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header id="main-header">
+
+        <div class="container header-content">
+
+            <h1 class="logo">Exa's Hub</h1>
+
+            <nav>
+
+                <a href="index.html">Home</a>
+
+                <a href="matematika-index.html">Matematika</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <div class="article-container">
+
+            
+
+            <div class="article-header">
+
+                <span class="category">Matematika - Bab 1</span>
+
+                <h1>Sistem Persamaan Linear Dua Variabel (SPLDV)</h1>
+
+                <p class="article-meta">Oleh Exa | 22 Juni 2025 | Topik: Aljabar</p>
+
+            </div>
+
+            <div class="article-body">
+
+                <img src="https://images.unsplash.com/photo-1554475900-abac0b150921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8YWxnZWJyYSUyMGVxdWF0aW9ufGVufDB8fHx8fDE3MTk5Mzk2NjQ&ixlib=rb-4.0.3&q=80&w=1080" alt="Ilustrasi Persamaan Aljabar">
+
+                <p>SPLDV adalah materi fundamental dalam matematika yang sangat berguna untuk memecahkan masalah sehari-hari. Intinya adalah mencari nilai dua variabel (biasanya \(x\) dan \(y\)) dari dua persamaan yang saling berhubungan.</p>
+
+                <h2>Bentuk Umum SPLDV</h2>
+
+                <p>SPLDV terdiri dari dua persamaan linear dengan dua variabel, yang dapat ditulis sebagai:</p>
+
+                \[
+
+                a_1 x + b_1 y = c_1 \\
+
+                a_2 x + b_2 y = c_2
+
+                \]
+
+                <p>Di mana \(a_1, a_2, b_1, b_2, c_1, c_2\) adalah bilangan real, dan \(x, y\) adalah variabel yang dicari nilainya.</p>
+
+                <h2>Metode Penyelesaian SPLDV</h2>
+
+                <p>Ada tiga metode utama untuk menemukan solusi dari SPLDV:</p>
+
+                <h3>1. Metode Substitusi (Penggantian)</h3>
+
+                <p>Metode ini melibatkan penggantian satu variabel dari satu persamaan ke persamaan lain.</p>
+
+                <ol>
+
+                    <li>Ubah salah satu persamaan menjadi bentuk \(x = \dots\) atau \(y = \dots\).</li>
+
+                    <li>Substitusikan ekspresi tersebut ke persamaan yang lain.</li>
+
+                    <li>Selesaikan persamaan untuk mendapatkan nilai variabel pertama.</li>
+
+                    <li>Substitusikan nilai yang didapat kembali ke langkah 1 untuk mencari variabel kedua.</li>
+
+                </ol>
+
+                <h3>2. Metode Eliminasi (Penghilangan)</h3>
+
+                <p>Metode ini bertujuan menghilangkan salah satu variabel dengan cara menjumlahkan atau mengurangkan kedua persamaan setelah disamakan koefisiennya.</p>
+
+                <p>Contoh:</p>
+
+                \[
+
+                2x + 3y = 10 \quad \text{(Persamaan 1)} \\
+
+                2x + 5y = 14 \quad \text{(Persamaan 2)}
+
+                \]
+
+                <p>Untuk mengeliminasi \(x\), kita kurangkan Persamaan 2 dengan Persamaan 1:</p>
+
+                \[
+
+                (2x + 5y) - (2x + 3y) = 14 - 10 \\
+
+                2y = 4 \\
+
+                y = 2
+
+                \]
+
+                <h3>3. Metode Campuran (Gabungan)</h3>
+
+                <p>Metode ini adalah yang paling sering digunakan karena paling efisien. Kita menggunakan eliminasi untuk mencari nilai satu variabel, lalu menggunakan substitusi untuk mencari nilai variabel yang tersisa.</p>
+
+                <h2>Contoh Soal Penerapan</h2>
+
+                <p>Harga 2 pensil dan 3 buku adalah Rp 17.000,00. Harga 1 pensil dan 2 buku adalah Rp 10.000,00. Berapakah harga 1 pensil?</p>
+
+                <p>Misalkan \(x\) adalah harga pensil dan \(y\) adalah harga buku.</p>
+
+                \[
+
+                2x + 3y = 17.000 \quad \text{(i)} \\
+
+                x + 2y = 10.000 \quad \text{(ii)}
+
+                \]
+
+                <p>Dengan metode campuran, kita dapat menemukan solusinya dengan mudah!</p>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <div class="container">
+
+            <p>&copy; 2025 Exa's Hub. Belajar Cepat, Paham Tuntas.</p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
