@@ -1,0 +1,77 @@
+body {
+
+    background-color: #f8f9fa;
+
+}
+
+.hidden {
+
+    display: none !important;
+
+}
+
+/* Styling untuk Kotak Navigasi (Menu Cards) */
+
+.menu-card {
+
+    cursor: pointer;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    border: 1px solid #dee2e6;
+
+}
+
+.menu-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+    background-color: #e9ecef;
+
+}
+
+/* Styling untuk Area Konten */
+
+.content-section {
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+}
+
+/* Styling untuk Kuis */
+
+#dynamic-quiz-form label {
+
+    display: block;
+
+    padding: 8px;
+
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+
+    transition: background-color 0.2s;
+
+}
+
+#dynamic-quiz-form label:hover {
+
+    background-color: #f0f0f0;
+
+}
+
+/* Penyesuaian agar form login tidak terlalu lebar */
+
+#login-section {
+
+    max-width: 450px;
+
+}

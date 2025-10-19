@@ -1,1 +1,245 @@
-capa
+<header class="p-3 bg-primary text-white text-center">
+
+    <h1>Portal Pembelajaran Siswa</h1>
+
+</header>
+
+<main class="container my-5">
+
+    
+
+    <!-- #################################### -->
+
+    <!-- 1. LOGIN SECTION -->
+
+    <!-- #################################### -->
+
+    <section id="login-section" class="card shadow p-4 mb-5 mx-auto">
+
+        <h2 class="card-title text-center mb-4">Masuk ke Portal</h2>
+
+        <form id="simple-login-form">
+
+            <div class="mb-3">
+
+                <label for="username" class="form-label">Nama Pengguna (Contoh: Exa)</label>
+
+                <input type="text" id="username" class="form-control" required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label for="class-code" class="form-label">Kode Kelas (Contoh: IX.A)</label>
+
+                <input type="text" id="class-code" class="form-control" required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label for="password" class="form-label">Kata Sandi</label>
+
+                <input type="password" id="password" class="form-control" required>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-3">Masuk</button>
+
+            <p id="login-message" class="text-danger mt-2 text-center hidden">Data login salah. Coba lagi.</p>
+
+        </form>
+
+    </section>
+
+    
+
+    <!-- #################################### -->
+
+    <!-- 2. CONTENT AREA (Setelah Login) -->
+
+    <!-- #################################### -->
+
+    <div id="content-area" class="hidden">
+
+        
+
+        <!-- Navigasi Utama Berbentuk Kotak (Cards) -->
+
+        <h2 class="mb-4">Menu Utama</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+            
+
+            <!-- Kotak 1: Blog Terbaru -->
+
+            <div class="col">
+
+                <div class="menu-card card h-100 text-center shadow-sm" onclick="showSection('dynamic-posts')">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">📰 Blog Terbaru</h5>
+
+                        <p class="card-text">Baca materi dan pengumuman terbaru.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+            <!-- Kotak 2: Kuis Interaktif -->
+
+            <div class="col">
+
+                <div class="menu-card card h-100 text-center shadow-sm" onclick="showSection('quiz-selection')">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">🧠 Kuis & Latihan</h5>
+
+                        <p class="card-text">Uji pemahamanmu dengan kuis pilihan ganda.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+            <!-- Kotak 3: Galeri Media -->
+
+            <div class="col">
+
+                <div class="menu-card card h-100 text-center shadow-sm" onclick="showSection('video-section')">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">🎬 Video & Foto</h5>
+
+                        <p class="card-text">Kumpulan video pembelajaran dan galeri foto.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Area Konten Dinamis (Hanya tampil satu per satu) -->
+
+        <div id="dynamic-content-container">
+
+            
+
+            <!-- 2.1. Area Blog Terbaru -->
+
+            <section id="dynamic-posts" class="content-section">
+
+                <h2 class="mb-4">Postingan Blog Terbaru</h2>
+
+                <!-- Konten Postingan akan dimuat di sini oleh JS -->
+
+                <p>Memuat postingan...</p>
+
+            </section>
+
+            <!-- 2.2. Area Pemilihan Kuis -->
+
+            <section id="quiz-selection" class="content-section hidden">
+
+                <h2 class="mb-4">Pilih Kuis</h2>
+
+                <div class="row g-3 align-items-end">
+
+                    <div class="col-md-4">
+
+                        <label for="class-selector" class="form-label">Kelas</label>
+
+                        <select id="class-selector" class="form-select">
+
+                            <option value="VII.A">Kelas VII.A</option>
+
+                            <option value="VIII.B">Kelas VIII.B</option>
+
+                            <option value="IX.A">Kelas IX.A</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <label for="subject-selector" class="form-label">Pelajaran</label>
+
+                        <select id="subject-selector" class="form-select">
+
+                            <option value="ipa">IPA</option>
+
+                            <option value="math">Matematika</option>
+
+                            <option value="history">Sejarah</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <button onclick="loadQuizContent()" class="btn btn-success w-100">Mulai Kuis</button>
+
+                    </div>
+
+                </div>
+
+                
+
+                <!-- Area Kuis -->
+
+                <div id="quiz-container" class="card p-4 mt-4 hidden">
+
+                    <h3 class="mb-3">Kuis <span id="quiz-title"></span></h3>
+
+                    <form id="dynamic-quiz-form"></form>
+
+                    <button onclick="submitQuiz()" class="btn btn-warning w-100 mt-4">Selesai Kuis</button>
+
+                    <div id="quiz-result" class="alert alert-info mt-3 hidden"></div>
+
+                </div>
+
+            </section>
+
+            <!-- 2.3. Area Video -->
+
+            <section id="video-section" class="content-section hidden">
+
+                <h2 class="mb-4">Galeri Media</h2>
+
+                <div class="video-wrapper ratio ratio-16x9 mb-4">
+
+                    <iframe id="main-video" src="https://www.youtube.com/embed/contoh_id_video" title="Video Pembelajaran" allowfullscreen></iframe>
+
+                </div>
+
+                <p class="text-muted">Untuk mengganti video, ubah ID video di file script.js.</p>
+
+            </section>
+
+        </div> <!-- Akhir dynamic-content-container -->
+
+    </div> <!-- Akhir content-area -->
+
+</main>
+
+<footer class="bg-light text-center py-3 mt-5 border-top">
+
+    <p>&copy; 2023 Portal Siswa. Dibuat dengan Bootstrap & JS.</p>
+
+</footer>
