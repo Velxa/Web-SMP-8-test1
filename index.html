@@ -10,6 +10,14 @@
 
     <title>Exa's Study Hub - Kelas 9 Merdeka</title>
 
+    <!-- Pastikan kamu menggunakan CDN MathJax untuk menampilkan rumus LaTeX -->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -28,9 +36,7 @@
 
             <nav>
 
-                <a href="#featured">Materi Utama</a>
-
-                <a href="#latest">Postingan Baru</a>
+                <a href="#subjects">Mata Pelajaran</a>
 
                 <a href="#about">Tentang Exa</a>
 
@@ -40,123 +46,121 @@
 
     </header>
 
-    <!-- HERO SECTION (MATEMATIKA) -->
+    <!-- HERO SECTION (Selamat Datang) -->
 
     <section id="featured" class="hero-section">
 
         <div class="container">
 
-            <h2 class="hero-title">Matematika: Memahami Konsep Transformasi Geometri (Translasi dan Refleksi)</h2>
+            <h2 class="hero-title">Selamat Datang di Pusat Belajar Kelas 9 Kurikulum Merdeka!</h2>
 
-            <p class="hero-meta">Oleh Exa | 20 Oktober 2025 | Fokus Pelajaran: Matematika</p>
-
-            <!-- LINK SUDAH BENAR -->
-
-            <a href="materi-matematika.html" class="btn-primary">Pelajari Sekarang</a>
+            <p class="hero-meta">Pilih mata pelajaran di bawah ini untuk memulai sesi belajarmu.</p>
 
         </div>
 
     </section>
 
-    <!-- MAIN CONTENT GRID -->
+    <!-- MAIN CONTENT GRID (Menampilkan Mata Pelajaran) -->
 
     <div class="container main-grid">
 
         
 
-        <main id="latest" class="posts-area">
+        <main id="subjects" class="posts-area">
 
-            <h3>Latest Insights</h3>
+            <h3>Pilih Mata Pelajaran</h3>
 
             
 
-            <!-- POST CARD 1 (IPA - Pewarisan Sifat) -->
+            <!-- SUBJEK 1: MATEMATIKA -->
 
-            <article class="post-card reveal">
+            <a href="matematika-index.html" class="subject-card">
 
-                <img src="https://images.unsplash.com/photo-1581092911228-e4b094406208?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDA1NjI0OTJ8&ixlib=rb-4.0.3&q=80&w=1080" alt="Pewarisan Sifat" class="post-image">
+                <article class="post-card reveal">
 
-                <div class="post-content">
+                    <img src="https://images.unsplash.com/photo-1535498730771-e735b99dcd62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8bWF0aGVtYXRpY3N8ZW58MHx8fHwxNzE5OTM5NjY0fA&ixlib=rb-4.0.3&q=80&w=1080" alt="Matematika" class="post-image">
 
-                    <span class="category">IPA (Biologi)</span>
+                    <div class="post-content">
 
-                    <h4>Mendalami Hukum Mendel: Kenapa Kita Mirip Orang Tua?</h4>
+                        <span class="category">Wajib</span>
 
-                    <p>Penjelasan sederhana tentang genetika, dominan, resesif, dan bagaimana sifat diwariskan dari generasi ke generasi.</p>
+                        <h4>Matematika</h4>
 
-                    <!-- LINK SUDAH BENAR -->
+                        <p>Aljabar, Geometri, dan Statistika. Siap taklukkan setiap rumus!</p>
 
-                    <a href="materi-ipa.html" class="read-more">Baca Selengkapnya &rarr;</a>
+                    </div>
 
-                </div>
+                </article>
 
-            </article>
+            </a>
 
-            <!-- POST CARD 2 (AGAMA ISLAM) -->
+            <!-- SUBJEK 2: IPA -->
 
-            <article class="post-card reveal">
+            <a href="ipa-index.html" class="subject-card">
 
-                <img src="https://images.unsplash.com/photo-1550942470-4f5a3e14717b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDA1NjI1Mjl8&ixlib=rb-4.0.3&q=80&w=1080" alt="Toleransi dalam Islam" class="post-image">
+                <article class="post-card reveal">
 
-                <div class="post-content">
+                    <img src="https://images.unsplash.com/photo-1581092911228-e4b094406208?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8YmlvbG9neXx8ZW58MHx8fHwxNzE5OTM5NjY0fA&ixlib=rb-4.0.3&q=80&w=1080" alt="IPA" class="post-image">
 
-                    <span class="category">Agama Islam</span>
+                    <div class="post-content">
 
-                    <h4>Tasāmuḥ (Toleransi): Prinsip Hidup Berdampingan dalam Islam</h4>
+                        <span class="category">Wajib</span>
 
-                    <p>Bagaimana ajaran Islam mengajarkan kita untuk menghargai perbedaan keyakinan dan praktik dalam kehidupan sehari-hari.</p>
+                        <h4>Ilmu Pengetahuan Alam (IPA)</h4>
 
-                    <!-- LINK SUDAH BENAR -->
+                        <p>Mendalami Biologi, Fisika, dan Kimia. Eksplorasi dunia di sekitar kita.</p>
 
-                    <a href="materi-agama.html" class="read-more">Baca Selengkapnya &rarr;</a>
+                    </div>
 
-                </div>
+                </article>
 
-            </article>
+            </a>
 
-            <!-- POST CARD 3 (BAHASA INDONESIA) -->
+            <!-- SUBJEK 3: IPS -->
 
-            <article class="post-card reveal">
+            <a href="ips-index.html" class="subject-card">
 
-                <img src="https://images.unsplash.com/photo-1549414216-3e414c776495?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDA1NjI1NDl8&ixlib=rb-4.0.3&q=80&w=1080" alt="Teks Diskusi" class="post-image">
+                <article class="post-card reveal">
 
-                <div class="post-content">
+                    <img src="https://images.unsplash.com/photo-1517404215738-15263e9f9855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8Z2xvYmFsaXphdGlvbnx8ZW58MHx8fHwxNzE5OTM5NjY0fA&ixlib=rb-4.0.3&q=80&w=1080" alt="IPS" class="post-image">
 
-                    <span class="category">Bahasa Indonesia</span>
+                    <div class="post-content">
 
-                    <h4>Struktur dan Ciri-Ciri Teks Diskusi yang Baik dan Benar</h4>
+                        <span class="category">Wajib</span>
 
-                    <p>Panduan lengkap untuk menganalisis dan menyusun teks yang berisi pro dan kontra terhadap suatu isu penting.</p>
+                        <h4>Ilmu Pengetahuan Sosial (IPS)</h4>
 
-                    <!-- LINK SUDAH BENAR -->
+                        <p>Memahami sejarah, geografi, dan sosiologi masyarakat modern.</p>
 
-                    <a href="materi-bahasa.html" class="read-more">Baca Selengkapnya &rarr;</a>
+                    </div>
 
-                </div>
+                </article>
 
-            </article>
+            </a>
 
-            <!-- POST CARD 4 (IPS) -->
+            <!-- SUBJEK 4: AGAMA ISLAM -->
 
-            <article class="post-card reveal">
+            <a href="agama-index.html" class="subject-card">
 
-                <img src="https://images.unsplash.com/photo-1517404215738-15263e9f9855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDA1NjI1NjV8&ixlib=rb-4.0.3&q=80&w=1080" alt="Dampak Globalisasi" class="post-image">
+                <article class="post-card reveal">
 
-                <div class="post-content">
+                    <img src="https://images.unsplash.com/photo-1550942470-4f5a3e14717b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8aXNsYW18ZW58MHx8fHwxNzE5OTM5NjY0fA&ixlib=rb-4.0.3&q=80&w=1080" alt="Agama Islam" class="post-image">
 
-                    <span class="category">IPS</span>
+                    <div class="post-content">
 
-                    <h4>Globalisasi: Dampak Positif dan Negatif Terhadap Budaya Lokal</h4>
+                        <span class="category">Wajib</span>
 
-                    <p>Menganalisis pengaruh era globalisasi terhadap perubahan sosial dan budaya di lingkungan masyarakat Indonesia.</p>
+                        <h4>Pendidikan Agama Islam (PAI)</h4>
 
-                    <!-- LINK SUDAH BENAR -->
+                        <p>Mendalami akhlak, fikih, dan sejarah peradaban Islam.</p>
 
-                    <a href="materi-ips.html" class="read-more">Baca Selengkapnya &rarr;</a>
+                    </div>
 
-                </div>
+                </article>
 
-            </article>
+            </a>
+
+            
 
         </main>
 
@@ -170,7 +174,7 @@
 
                 <img src="https://via.placeholder.com/120x120?text=E" alt="Exa Profile" class="profile-pic">
 
-                <p>Hai! Aku Exa, Mahasiswa yang suka banget sama dunia pendidikan dan game. Aku buat portal ini buat bantu teman-teman Kelas 9 belajar Kurikulum Merdeka.</p>
+                <p>Hai! Aku Exa,siswa kelas 9 yang suka banget sama dunia pendidikan dan game. Aku buat portal ini buat bantu teman-teman Kelas 9 belajar Kurikulum Merdeka.</p>
 
                 <p style="font-size: 0.9em; margin-top: 10px; color: var(--secondary-text);">
 
@@ -188,15 +192,13 @@
 
                 <ul>
 
-                    <li><a href="materi-matematika.html">Matematika</a></li>
+                    <li><a href="matematika-index.html">Matematika</a></li>
 
-                    <li><a href="materi-ipa.html">IPA (Biologi)</a></li>
+                    <li><a href="ipa-index.html">IPA</a></li>
 
-                    <li><a href="materi-bahasa.html">Bahasa Indonesia</a></li>
+                    <li><a href="ips-index.html">IPS</a></li>
 
-                    <li><a href="materi-ips.html">IPS</a></li>
-
-                    <li><a href="materi-agama.html">Agama Islam</a></li>
+                    <li><a href="agama-index.html">Agama Islam</a></li>
 
                 </ul>
 
@@ -217,8 +219,6 @@
         </div>
 
     </footer>
-
-    <!-- Link ke file JavaScript kita -->
 
     <script src="script.js"></script>
 
